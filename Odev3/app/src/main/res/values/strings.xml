@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Odev3</string>
+    <string name="arabaBaslik">Details</string>
+    <string name="arabaAd">Corvette</string>
+    <string name="arabaFiyat">$ 150/day</string>
+    <string name="hakkinka">About Car</string>
+    <string name="ozellikler">Assembly Location	GM Bowling Green Assembly Plant, Kentucky, USA Body Style(s)	Coupe, Convertible Layout	Mid-Engined, Longitudinal Engine(s)	5.5L LT6 V8 Transmission(s)	10-Speed Dual-Clutch Drive Wheels	Rear-Wheel-Drive Availability	U.S.A., Canada, Mexico Predecessor	2019 Chevrolet Corvette Z06 Successor	2024 Chevrolet Corvette Z06</string>
+
+
+</resources>
