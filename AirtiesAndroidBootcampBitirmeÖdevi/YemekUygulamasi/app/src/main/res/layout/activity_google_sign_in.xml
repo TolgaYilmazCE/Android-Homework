@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#ADD8E6"
+    tools:context=".GoogleSignInActivity">
+    <TextView
+        android:id="@+id/girisCreatetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_an_account"
+        android:textSize="26sp"
+        android:textColor="#FF9610"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066"
+        />
+
+    <EditText
+        android:id="@+id/emailLoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="10dp"
+        android:background="#FFFFFF"
+        android:hint="@string/email_address"
+        app:layout_constraintEnd_toEndOf="@+id/girisCreatetextView"
+        app:layout_constraintStart_toStartOf="@id/girisCreatetextView"
+        app:layout_constraintTop_toBottomOf="@id/girisCreatetextView"/>
+
+    <EditText
+        android:id="@+id/passwordLoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="10dp"
+        android:background="#FFFFFF"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@+id/emailLoginEditText"
+        app:layout_constraintStart_toStartOf="@id/emailLoginEditText"
+        app:layout_constraintTop_toBottomOf="@id/emailLoginEditText"/>
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="10dp"
+        android:text="Create an Account"
+        android:backgroundTint="#FF9610"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLoginEditText"
+        app:layout_constraintStart_toStartOf="@id/passwordLoginEditText"
+        app:layout_constraintTop_toBottomOf="@id/passwordLoginEditText"/>
+
+    <TextView
+        android:id="@+id/girisHaveAccountView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/have_account"
+        android:layout_marginTop="36dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/createAccountButton"
+        app:layout_constraintStart_toStartOf="@id/createAccountButton"
+        app:layout_constraintTop_toBottomOf="@id/createAccountButton"/>
+
+    <Button
+        android:id="@+id/continueGoogletButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="14dp"
+        android:paddingLeft="10dp"
+        android:text="@string/continue_with_google"
+        android:backgroundTint="#FF9610"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/girisHaveAccountView"
+        app:layout_constraintStart_toStartOf="@id/girisHaveAccountView"
+        app:layout_constraintTop_toBottomOf="@id/girisHaveAccountView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

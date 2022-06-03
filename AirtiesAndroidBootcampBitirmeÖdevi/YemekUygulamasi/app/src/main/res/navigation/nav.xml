@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.yemekuygulamasi.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_googleSignInActivity"
+            app:destination="@id/googleSignInActivity"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.yemekuygulamasi.onboard.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_googleSignInActivity"
+            app:destination="@id/googleSignInActivity"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.yemekuygulamasi.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_yemekDetayFragment2"
+            app:destination="@id/yemekDetayFragment2" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_sepetFragment"
+            app:destination="@id/sepetFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/googleSignInActivity"
+        android:name="com.example.yemekuygulamasi.GoogleSignInActivity"
+        android:label="activity_google_sign_in"
+        tools:layout="@layout/activity_google_sign_in" />
+    <fragment
+        android:id="@+id/yemekDetayFragment2"
+        android:name="com.example.yemekuygulamasi.fragment.YemekDetayFragment"
+        android:label="YemekDetayFragment"
+        tools:layout="@layout/fragment_yemek_detay">
+        <argument
+            android:name="yemek"
+            app:argType="com.example.yemekuygulamasi.entity.Yemekler" />
+        <action
+            android:id="@+id/action_yemekDetayFragment2_to_sepetFragment"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/action_yemekDetayFragment2_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.yemekuygulamasi.fragment.SepetFragment"
+        android:label="SepetFragment"
+        tools:layout="@layout/fragment_sepet">
+        <action
+            android:id="@+id/action_sepetFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+        <argument
+            android:name="yemek"
+            app:argType="com.example.yemekuygulamasi.entity.Yemekler" />
+    </fragment>
+</navigation>
